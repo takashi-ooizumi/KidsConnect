@@ -124,13 +124,13 @@
  /users{user_id}/edit [会員情報編集画面表示]
  /users{user_id}/update [会員情報更新]
  /users{user_id}/delete [会員情報削除]
- /users{user_id}/childs [子供情報一覧表示]
- /users{user_id}/childs/new [子供情報の新規登録画面表示]
- /users{user_id}/childs/create [子供情報の新規登録]
- /users{user_id}/childs/{child_id} [子供情報画面の表示]
- /users{user_id}/childs/{child_id}/edit [子供情報編集画面の表示]
- /users{user_id}/childs/{child_id}/update [子供情報の更新]
- /users{user_id}/childs/{child_id}/delete [子供情報の削除]
+ /users{user_id}/children [子供情報一覧表示]
+ /users{user_id}/children/new [子供情報の新規登録画面表示]
+ /users{user_id}/children/create [子供情報の新規登録]
+ /users{user_id}/children/{child_id} [子供情報画面の表示]
+ /users{user_id}/children/{child_id}/edit [子供情報編集画面の表示]
+ /users{user_id}/children/{child_id}/update [子供情報の更新]
+ /users{user_id}/children/{child_id}/delete [子供情報の削除]
  /users/{user_id}/identification [本人確認情報表示]
  /users/{user_id}/identification/create [本人確認情報登録]
  /users/{user_id}/identification/edit [本人確認情報編集]
@@ -157,6 +157,6 @@
 /users/{user_id}/blocklist/delete [ブロックリスト削除]
 
 ■画面遷移図
-https://www.figma.com/file/ZLbF0iTnPz15WBt2Vs9SOw/Untitled?node-id=0%3A1&t=6HczNTCmNKHmjXgf-1
+https://www.figma.com/file/ZLbF0iTnPz15WBt2Vs9SOw/Untitled?node-id=6%3A6&t=BVJXLwvnb07KTIBu-1
 
 
