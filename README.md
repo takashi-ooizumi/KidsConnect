@@ -109,3 +109,52 @@
 　メイン機能実装：1/28 - 2/20
 　β版をRUNTEQ内リリース（MVP）：2/21〆切
 　本番リリース：2月末
+
+■URL
+ /top [top画面の表示]
+ /login [ログイン]
+ /logout [ログアウト]
+ /users [会員情報一覧表示]
+ /users/new [新規会員登録画面表示]
+ /users/create [新規会員登録]
+ /users{user_id} [会員情報画面表示]
+ /users{user_id}/edit [会員情報編集画面表示]
+ /users{user_id}/update [会員情報更新]
+ /users{user_id}/delete [会員情報削除]
+ /users{user_id}/childs [子供情報一覧表示]
+ /users{user_id}/childs/new [子供情報の新規登録画面表示]
+ /users{user_id}/childs/create [子供情報の新規登録]
+ /users{user_id}/childs/{child_id} [子供情報画面の表示]
+ /users{user_id}/childs/{child_id}/edit [子供情報編集画面の表示]
+ /users{user_id}/childs/{child_id}/update [子供情報の更新]
+ /users{user_id}/childs/{child_id}/delete [子供情報の削除]
+ /users/{user_id}/identification [本人確認情報表示]
+ /users/{user_id}/identification/create [本人確認情報登録]
+ /users/{user_id}/identification/edit [本人確認情報編集]
+ /users/{user_id}/identification/delete [本人確認情報削除]
+ /users/user_id}/messages [メッセージの一覧表示]
+ /users/{user_id}/message/{user_id} [メッセージの画面の表示]　※チャット画面
+ users/{user_id}/messages/create [メッセージの作成]
+ users/{user_id}/messages/edit [メッセージの編集]
+ users/{user_id}/messages/delete [メッセージの削除]
+
+/playgrounds [遊び場情報の表示]
+/playgrounds/{playground_id} [遊び場情報の詳細表示]
+/playgrounds/{playground_id}/new [遊び場情報の新規作成画面表示]
+/playgrounds/{playground_id}/create [遊び場情報の作成]
+/playgrounds/{playground_id}/edit [遊び場情報の編集画面表示]
+/playgrounds/{playground_id}/update [遊び場情報の更新]
+/playgrounds/{playground_id}/delete [遊び場情報の削除]
+
+/users/{user_id}/groups [ユーザーグループ一覧の表示] 
+/users/{user_id}/groups/create [ユーザーグループへの追加]
+/users/{user_id}/groups/delete [ユーザーグループからの削除]
+/users/{user_id}/blocklist [ブロック一覧表示]
+/users/{user_id}/blocklist/new [ブロックリスト追加]
+/users/{user_id}/blocklist/delete [ブロックリスト削除]
+
+■画面遷移図
+https://www.figma.com/file/ZLbF0iTnPz15WBt2Vs9SOw/Untitled?node-id=19%3A132&t=vikDb0MxrO7xfzHg-1
+
+
+
