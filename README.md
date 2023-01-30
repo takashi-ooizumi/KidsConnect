@@ -75,6 +75,9 @@
 　会員グループの編集
 　会員グループの削除
 　管理者への意見要望情報の登録
+  ユーザーのブロックリストの閲覧
+  ユーザーのブロックリストの作成
+  ユーザーのブロックリストの削除
 
 「管理者の機能」
 　管理者への意見要望情報の登録
@@ -154,7 +157,7 @@
 /users/{user_id}/blocklist/delete [ブロックリスト削除]
 
 ■画面遷移図
-https://www.figma.com/file/ZLbF0iTnPz15WBt2Vs9SOw/Untitled?node-id=19%3A132&t=vikDb0MxrO7xfzHg-1
+https://www.figma.com/file/ZLbF0iTnPz15WBt2Vs9SOw/Untitled?node-id=0%3A1&t=6HczNTCmNKHmjXgf-1
 
 
 
