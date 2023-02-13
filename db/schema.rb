@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_13_041622) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_13_042648) do
+  create_table "children", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "avatar_name"
+    t.string "avatar_image_url"
+    t.integer "gender"
+    t.integer "age"
+    t.integer "character"
+    t.string "favorite_character_text"
+    t.integer "favorite_character_id"
+    t.string "profile"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "identifications", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "first_name"
