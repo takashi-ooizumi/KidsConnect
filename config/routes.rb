@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   root "top_page#index"
 
-  resources :users, only: %i[index edit show new]
+  resources :users, only: %i[index edit show new], shallow: true do
+    resources :identifications, only: %i[show edit]
+  end
 end
