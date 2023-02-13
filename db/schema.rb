@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_13_045342) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_13_045618) do
   create_table "areas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "address", null: false
     t.string "address_code", null: false
@@ -73,6 +73,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_045342) do
     t.integer "target_user_id", null: false
     t.string "message", null: false
     t.date "readed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playgrounds", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "address", null: false
+    t.integer "area_id"
+    t.string "image_url"
+    t.date "open_time"
+    t.date "close_time"
+    t.integer "playng_type_id"
+    t.string "infomation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
