@@ -1,0 +1,2 @@
+class FavoriteCharacter < ApplicationRecord
+end
