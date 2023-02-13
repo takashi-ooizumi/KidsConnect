@@ -1,7 +1,7 @@
 class CreateIdentifications < ActiveRecord::Migration[7.0]
   def change
     create_table :identifications do |t|
-      t.integer :user_id, null:false
+      t.reference :user, foreign_key:true, null:false
       t.string :first_name
       t.string :last_name
       t.integer :age

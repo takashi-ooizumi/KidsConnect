@@ -1,9 +1,9 @@
 class CreateGroupMembers < ActiveRecord::Migration[7.0]
   def change
     create_table :group_members do |t|
-      t.integer :user_id, null:false
-      t.integer :target_user_id, null:false
-      
+      t.reference :user, foreign_key:{to_table: :users}, null:false
+      t.reference :target_user, foreign_key:{to_table: :users} null:false
+
       t.timestamps
     end
   end

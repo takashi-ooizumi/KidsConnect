@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
     create_table :users do |t|
       t.string :avatar_name, null:false
       t.string :avatar_image_url, null:false
-      t.integer :area_id, null:false
+      t.reference :area, foreign_key:true, null:false
       t.string :email, null:false
       t.string :crypted_password, null:false
       t.string :salt, null:false
