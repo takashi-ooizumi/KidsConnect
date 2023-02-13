@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "top_page#index"
+
+  resources :users, only: %i[index edit show new]
 end
