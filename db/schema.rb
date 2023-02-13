@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_13_045618) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_13_045936) do
   create_table "areas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "address", null: false
     t.string "address_code", null: false
@@ -86,6 +86,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_045618) do
     t.date "close_time"
     t.integer "playng_type_id"
     t.string "infomation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playing_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
