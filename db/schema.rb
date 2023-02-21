@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_045936) do
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-    t.string "adress"
+    t.string "address"
     t.string "phone_number"
     t.string "work"
     t.string "identification_data_path"

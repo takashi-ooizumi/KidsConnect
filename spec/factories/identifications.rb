@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :identificate do
-    user_id { 0 }
+  factory :identification do
     first_name { 'default' }
     last_name { 'default' }
     age { 20 }
@@ -9,5 +8,8 @@ FactoryBot.define do
     work { 'default' }
     identification_data_path { 'default' }
     confirm { false } 
+
+    association :user
+    association :identification
   end
 end
