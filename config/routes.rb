@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'user_session/new'
+  get 'user_session/create'
+  get 'user_session/destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -6,7 +9,11 @@ Rails.application.routes.draw do
 
   root "top_page#index"
 
-  resources :users, only: %i[index edit show new] do
+  get 'login', to: 'user_sessions#new'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
+
+  resources :users, only: %i[index edit show new create] do
     resources :identifications, only: %i[show edit]
     resources :children, only: %i[index edit show new]
     resources :group_members, only: %i[index]
