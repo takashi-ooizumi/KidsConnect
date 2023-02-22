@@ -96,7 +96,7 @@ User.create(
   avatar_image_url: 'default',
   area_id: 1,
   email: 'admin@example.com',
-  crypted_password: 'default',
+  crypted_password: 'password',
   salt: 'default',
   role: 1
 )
