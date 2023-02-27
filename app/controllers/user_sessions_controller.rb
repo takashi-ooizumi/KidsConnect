@@ -4,15 +4,17 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
+      flash[:success] = 'login successful'
       redirect_back_or_to user_path(@user)
     else
-      flash.now[:alert] = 'Login failed'
-      redirect_to login_path
+      flash[:danger] = 'login failed'
+      redirect_to root_path
     end
   end
 
   def destroy
     logout
-    redirect_to login_path, status: :see_other
+    flash[:notice] = 'logout successful!'
+    redirect_to root_path, status: :see_other
   end
 end
