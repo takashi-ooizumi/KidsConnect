@@ -1,0 +1,7 @@
+<div>header</div>
+<div>
+  <%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete } %>
+</div>
+<div>
+  <%= current_user.avatar_name %>
+</div>
