@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_24_074649) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_150214) do
   create_table "areas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "address", null: false
     t.string "address_code", null: false
@@ -121,6 +121,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_074649) do
     t.string "access_count_to_reset_password_page"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile"
     t.index ["area_id"], name: "index_users_on_area_id"
   end
 

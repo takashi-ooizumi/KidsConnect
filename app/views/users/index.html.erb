@@ -1,1 +1,10 @@
 users#index
+<h1>ユーザー検索</h1>
+
+<div>
+  <% @users.each do |user| %>
+    <div>
+      <%= link_to user.avatar_name, user_path(user) %>
+    </div>
+  <% end %>
+<div>

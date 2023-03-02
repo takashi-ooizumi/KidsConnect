@@ -1,1 +1,23 @@
-users#{user_id}#edit
+<h1>ユーザー情報編集</h1>
+
+<div>
+  <%= form_with model: @user, local: true do |form| %>
+    <div>
+      <%= form.label :avatar_name %>
+      <%= form.text_field :avatar_name %>
+    </div>
+    <div>
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
+    <div>
+      <%= form.label :area_id %>
+      <%= form.select :area_id, Area.all.map { |area| [area.address, area.id] } %>
+    </div>
+    <div>
+      <%= form.label :profile %>
+      <%= form.text_field :profile %>
+    </div>
+    <%= form.submit '登録' %>
+  <% end %>
+</div>

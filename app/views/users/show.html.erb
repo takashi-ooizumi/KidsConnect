@@ -1,1 +1,16 @@
-users#show
+<h1>ユーザー詳細</h1>
+<div>ユーザー名：
+  <%= @user.avatar_name %>
+</div>
+<div>地域:
+  <%= @area %>
+</div>
+<div>
+
+
+<div>
+  <%= link_to 'ユーザー情報編集', edit_user_path %>
+</div>
+<div>
+  <%= link_to 'ユーザー検索', users_path %>
+</div>
