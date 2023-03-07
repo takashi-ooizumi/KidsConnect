@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     @area = @user.area_id == nil ? '未設定' : Area.find(@user.area_id).address
   end
 
@@ -22,19 +22,22 @@ class UsersController < ApplicationController
     @user = User.new(set_params)
     
     if @user.save
-      redirect_to root_path
+      flash[:success] = '登録成功'
+      redirect_to user_path(@user)
     else
-      render :new
+      flash[:danger] = '登録失敗'
+      redirect_back_or_to new_user_path
     end
   end
   
   def update
     user = current_user
     if user.update(set_params)
-      redirect_to user_path(user), success: 'ユーザー情報更新完了'
+      flash[:success] = 'ユーザー情報更新完了'
+      redirect_to user_path(user)
     else
-      flash.now['danger'] = 'ユーザー情報更新に失敗しました。'
-      render :edit
+      flash['danger'] = 'ユーザー情報更新に失敗しました。'
+      redirect_to new_user_path
     end
 
   end

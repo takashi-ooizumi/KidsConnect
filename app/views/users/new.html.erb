@@ -1,4 +1,3 @@
-users#new
 <div>
   <h1>ユーザー登録</h1>
   <%= form_with model: @user, local: true do |form| %>
@@ -9,6 +8,11 @@ users#new
     <div>
       <%= form.label :email %>
       <%= form.text_field :email %>
+    </div>
+    <div>
+    <div>
+      <%= form.label :area_id %>
+      <%= form.collection_select :area_id, Area.all, :id, :address %>
     </div>
     <div>
       <%= form.label :password %>

@@ -1,1 +1,31 @@
-users/{user_id}.children/new
+<h1>こども情報新規登録</h1>
+
+<div>
+  <%= form_with model: @child, url: [@user, @child], local: true do |form| %>
+    <div>
+      <%= form.label :avatar_name %>
+      <%= form.text_field :avatar_name %>
+    </div>
+    <div>
+      <%= form.label :gender %>
+      <%= form.select :gender, Child.gender_types.keys.to_a.map {|k| [k, k]}, {} %>
+    </div>
+    <div>
+      <%= form.label :age %>
+      <%= form.number_field :age, in: 0..12 %>
+    </div>
+    <div>
+      <%= form.label :profile %>
+      <%= form.text_field :profile %>
+    </div>
+    <div>
+      <%= form.label :character %>
+      <%= form.range_field :character, in: 1..10 %>
+    </div>
+    <div>
+      <%= form.label :favorite_character_id %>
+      <%= form.collection_select :favorite_character_id, FavoriteCharacter.all, :id, :name %>
+    </div>
+    <%= form.submit '登録' %>
+  <% end %>
+</div>

@@ -1,1 +1,14 @@
-users/{user_id}.children/{child_id}
+<h1>子供情報詳細</h1>
+
+<div>
+  <%= @user.avatar_name %>さんのこども
+</div>
+<div>ニックネーム:
+  <%= @child.avatar_name %> ちゃん
+</div>
+<div>年齢:
+  <%= @child.age %>歳
+</div>
+<div>プロフィール:
+  <%= @child.profile %>
+</div>

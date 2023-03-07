@@ -5,12 +5,25 @@
 <div>地域:
   <%= @area %>
 </div>
-<div>
-
-
-<div>
-  <%= link_to 'ユーザー情報編集', edit_user_path %>
+<div>プロフィール：
+  <%= @user.profile %>
 </div>
+<div>
+
+
+
 <div>
   <%= link_to 'ユーザー検索', users_path %>
 </div>
+<div>
+  <%= link_to '子供情報一覧', user_children_path(@user) %>
+</div>
+
+<% if @user == current_user %>
+<div>
+  <%= link_to '子供情報登録', new_user_child_path(@user) %>
+</div>
+<div>
+  <%= link_to 'ユーザー情報編集', edit_user_path %>
+</div>
+<% end %>

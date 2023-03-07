@@ -1,1 +1,12 @@
-users/{user_id}.children
+<h1>こども情報一覧</h1>
+
+<div>
+  <%= @user.avatar_name %>さんのこども一覧
+</div>
+<div>
+  <% @children.each do |child| %>
+    <div>
+      <%= link_to child.avatar_name, user_child_path(@user, child) %> <%= child.age %> 歳　性別：<%= child.gender %>
+    </div>
+  <% end %>
+<div>
